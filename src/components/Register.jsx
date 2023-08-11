@@ -28,8 +28,9 @@ function Register() {
     };
 
     axios
-      .post('http://localhost:8081/register', dataToSend)
+      .post('https://node-myql.onrender.com/register', dataToSend)
       .then((response) => {
+        console.log('Registration response:', response.data);
         if (response.data.message === 'User already exists') {
           setRegistrationStatus('User already exists');
         } else if (response.data.message) {

@@ -10,7 +10,7 @@ function Dashboard() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8081/')
+      .get('https://node-myql.onrender.com')
       .then((response) => {
         setUsers(response.data);
         console.log('dataaa', response.data);
@@ -41,7 +41,7 @@ function Dashboard() {
 
   const handleBlock = () => {
     axios
-      .put('http://localhost:8081/block-users', {
+      .put('https://node-myql.onrender.com/block-users', {
         userIds: selectedUsers,
       })
       .then((response) => {
@@ -63,7 +63,7 @@ function Dashboard() {
 
   const handleUnblock = () => {
     axios
-      .put('http://localhost:8081/unblock-users', {
+      .put('https://node-myql.onrender.com/unblock-users', {
         userIds: selectedUsers,
       })
       .then((response) => {
@@ -86,7 +86,7 @@ function Dashboard() {
     Promise.all(
       selectedUsers.map((userId) =>
         axios
-          .delete(`http://localhost:8081/users/${userId}`)
+          .delete(`https://node-myql.onrender.com/users/${userId}`)
           .then(() => {
             console.log(`User with ID ${userId} deleted successfully.`);
             return userId;

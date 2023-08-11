@@ -28,7 +28,7 @@ function Login({ loginStatus, setLoginStatus }) {
     console.log(dataToSend.lastLoginTime);
 
     axios
-      .post('http://localhost:8081/login', dataToSend)
+      .post('https://node-myql.onrender.com/login', dataToSend)
       .then((response) => {
         if (response.data.message) {
           setLoginStatus(response.data.message);
