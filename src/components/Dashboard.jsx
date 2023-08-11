@@ -142,7 +142,6 @@ function Dashboard() {
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Password</th>
             <th>Last Login Time</th>
             <th>Registration Time</th>
             <th>Status</th>
@@ -161,7 +160,6 @@ function Dashboard() {
               <td>{user.id}</td>
               <td>{user.name}</td>
               <td>{user.email}</td>
-              <td>{user.password}</td>
               <td>{user.last_login}</td>
               <td>{user.registration_time}</td>
               <td>{user.status}</td>
